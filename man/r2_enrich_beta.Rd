@@ -19,7 +19,7 @@ r2_enrich_beta(dat, v1, v2, nv, exp1)
 This function estimates var(t1/(t1+t2))
 where t1 = beta1^2 and t2 = beta2^2, and
 beta1 and 2 are regression coefficients from a multiple regression model,
-i.e. y = x1•beta1 + x2•beta2 + e, where y, x1 and x2 are column-standardised
+i.e. y = x1â€¢beta1 + x2â€¢beta2 + e, where y, x1 and x2 are column-standardised
 (see Olkin and Finn 1995).
 y is N by 1 matrix having the dependent variable, and
 x1 is N by 1 matrix having the ith explanatory variables.
@@ -29,11 +29,12 @@ v1 and v2 indicates the ith and jth column in the data
 Note that r2_enrich (above) and r2_enrich_beta is equivalent (identical p-value derived).
 }
 \examples{
+\donttest{
 To get the test statistic for the ratio which is significantly
 different from the expectation.
 var(t1/(t1+t2)), where t1 = beta1^2 and t2 = beta2^2.
 beta1 and beta2 are regression coefficients from a multiple regression model,
-i.e. y = x1•beta1 + x2•beta2 + e, where y, x1 and x2 are column-standardised
+i.e. y = x1â€¢beta1 + x2â€¢beta2 + e, where y, x1 and x2 are column-standardised
 
 dat=read.table("test_ukbb_enrichment_choles") (see example file)
 nv=length(dat$V1)
@@ -63,29 +64,13 @@ output$beta2_sq (t2)
 output$cov (covariance between t1 and t2)
 -2.988221e-05
 
-output$ratio (ratio = t1/(t1+t2))
-0.6918768
-
-output$ratio_var (variance of ratio, var(t1/(t1+t2))
-0.1324076
-
-output$enrich_p (p-value for testing the ratio significantly different from 
-the expectation (exp1))
-0.07321821
-
-output$upper_ratio (upper limit of 95\% CI for the ratio)
-1.405079
-
-output$lower_ratio (lower limit of 95\% CI for the ratio)
--0.02132515
-
-output$enrich_p2 (p-value for testing the difference between t1/exp and t2/exp)
+output$enrich_p2 (p-value for testing the difference between t1/exp and t2/(1-exp))
 0.1997805
 
-output$mean_diff (difference between t1/exp and t2/exp)
+output$mean_diff (difference between t1/exp and t2/(1-exp))
 0.2743874
 
-output$var_diff (variance of difference, t1/exp - t2/exp)
+output$var_diff (variance of difference, t1/exp - t2/(1-exp))
 0.04579649
 
 output$upper_diff (upper limit of 95\% CI for the mean difference)
@@ -93,6 +78,7 @@ output$upper_diff (upper limit of 95\% CI for the mean difference)
 
 output$lower_diff (lower limit of 95\% CI for the mean difference)
 -0.1450549
+}
 }
 \references{
 Olkin, I. and J.D. Finn, Correlations redux. Psychological Bulletin, 1995. 118(1): p. 155.

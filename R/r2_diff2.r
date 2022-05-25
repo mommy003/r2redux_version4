@@ -13,6 +13,7 @@
   #' @keywords R2 variance information matrix
   #' @export
   #' @examples
+  #' \donttest{
   #' To get the test statistics for the difference between R2(y~x[,v1]) and 
   #' R2(y~x[,v2]). (here we define R2_1=R2(y~x[,v1])) and R2_2=R2(y~x[,v2])))
   #'
@@ -80,8 +81,8 @@
   #' 
   #' output$lower_diff (lower limit of 95% CI for the difference)
   #' -0.0005574975
-  #'
-  #' 
+  #' }
+ 
 
 
   r2_diff = function (dat,v1,v2,nv) {

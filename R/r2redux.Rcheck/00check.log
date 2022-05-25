@@ -1,0 +1,106 @@
+* using log directory ‘/data/alh-admmdm/softwares/r2redux_4/r2redux/R/r2redux.Rcheck’
+* using R version 3.6.0 (2019-04-26)
+* using platform: x86_64-redhat-linux-gnu (64-bit)
+* using session charset: UTF-8
+* checking for file ‘r2redux/DESCRIPTION’ ... OK
+* this is package ‘r2redux’ version ‘1.0.4’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... NOTE
+Found the following hidden files and directories:
+  R/.RData
+These were most likely included in error. See section ‘Package
+structure’ in the ‘Writing R Extensions’ manual.
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking whether package ‘r2redux’ can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking DESCRIPTION meta-information ... NOTE
+Checking should be performed on sources prepared by ‘R CMD build’.
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... WARNING
+Found the following directory with the name of a check directory:
+  ./R/r2redux.Rcheck
+Most likely, these were included erroneously.
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... OK
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+cc_trf: no visible global function definition for ‘qnorm’
+cc_trf: no visible global function definition for ‘dnorm’
+olkin12_1: no visible global function definition for ‘D’
+olkin12_13: no visible global function definition for ‘D’
+olkin12_3: no visible global function definition for ‘D’
+olkin12_34: no visible global function definition for ‘D’
+olkin_beta1_2: no visible global function definition for ‘D’
+olkin_beta_inf: no visible global function definition for ‘D’
+r2_diff: no visible global function definition for ‘cor’
+r2_diff: no visible global function definition for ‘lm’
+r2_diff: no visible global function definition for ‘logLik’
+r2_diff: no visible global function definition for ‘pchisq’
+r2_diff: no visible global function definition for ‘qchisq’
+r2_enrich: no visible global function definition for ‘cor’
+r2_enrich: no visible global function definition for ‘lm’
+r2_enrich: no visible global function definition for ‘pchisq’
+r2_enrich_beta: no visible global function definition for ‘cor’
+r2_enrich_beta: no visible global function definition for ‘lm’
+r2_enrich_beta: no visible global function definition for ‘pchisq’
+r2_var: no visible global function definition for ‘cor’
+r2_var: no visible global function definition for ‘lm’
+r2_var: no visible global function definition for ‘logLik’
+r2_var: no visible global function definition for ‘pchisq’
+r2_var: no visible global function definition for ‘qchisq’
+Undefined global functions or variables:
+  D cor dnorm lm logLik pchisq qchisq qnorm
+Consider adding
+  importFrom("stats", "D", "cor", "dnorm", "lm", "logLik", "pchisq",
+             "qchisq", "qnorm")
+to your NAMESPACE file.
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... OK
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... WARNING
+Undocumented arguments in documentation object 'r2_enrich'
+  ‘v1’ ‘v2’
+Documented arguments not in \usage in documentation object 'r2_enrich':
+  ‘v1/v2’
+
+Undocumented arguments in documentation object 'r2_enrich_beta'
+  ‘v1’ ‘v2’
+Documented arguments not in \usage in documentation object 'r2_enrich_beta':
+  ‘v1/v2’
+
+Functions with \usage entries need to have the appropriate \alias
+entries, and all their arguments documented.
+The \usage entries must correspond to syntactically valid R code.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... WARNING
+Warning: parse error in file 'lines':
+4: unexpected symbol
+21: ## No test: 
+22: To get
+       ^
+* checking examples ... OK
+* checking PDF version of manual ... OK
+* DONE
+Status: 3 WARNINGs, 3 NOTEs

@@ -18,6 +18,7 @@ i.e. y = x1•beta1 + x2•beta2 + e, where y, x1 and x2 are column-standardised
 (see Olkin and Finn 1995).
 }
 \examples{
+\donttest{
 To get information (variance-covariance) matrix of beta1^2 and beta2^2 where 
 beta1 and 2 are regression coefficients from a multiple regression model.
 
@@ -44,6 +45,7 @@ output$var2 (variance of beta2^2)
 
 output$var1_2 (variance of difference between beta1^2 and beta2^2)
 1.01141       
+}
 }
 \references{
 Olkin, I. and J.D. Finn, Correlations redux. Psychological Bulletin, 1995. 118(1): p. 155.

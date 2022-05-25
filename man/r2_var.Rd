@@ -23,6 +23,7 @@ v1 indicates the ith column in the x matrix
 (v1 can be multiple values between 1 - M, see Arguments below)
 }
 \examples{
+\donttest{
 To get the test statistics for R2(y~x[,v1])
 
 dat=read.table("test_ukbb_thresholds_scaled") (see example file)
@@ -73,6 +74,7 @@ output$upper_r2 (upper limit of 95\% CI for R2)
 
 output$lower_r2 (lower limit of 95\% CI for R2)
 0.01821657
+}
 }
 \keyword{R2}
 \keyword{information}

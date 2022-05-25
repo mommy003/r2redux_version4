@@ -14,7 +14,8 @@
   #' @param exp1 The expectation of the ratio (e.g. # SNPs for the genomic region of interest / total # SNPs in genomic partitioning) 
   #' @keywords variance of ratio between R2
   #' @export
-  #' @examples 
+  #' @examples
+  #" \donttest{
   #' To get test statistics for the ratio, i.e. t1/(t1+t2). 
   #' t1 = R2(y~x[,v1]+x[,v2]) - R2(y~x[,v1])) and
   #' t2 = R2(y~x[,v1]+x[,v2]) - R2(y~x[,v2]))
@@ -69,6 +70,7 @@
   #' 
   #' output$lower_ratio (lower limit of 95% CI for the ratio)
   #' -0.02132515
+  #' }
 
 
 

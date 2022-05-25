@@ -24,6 +24,7 @@ v1 or v2 indicates the ith column in the x matrix
 (v1 or v2 can be multiple values between 1 - M, see Arguments below)
 }
 \examples{
+\donttest{
 To get the test statistics for the difference between R2(y~x[,v1]) and 
 R2(y~x[,v2]). (here we define R2_1=R2(y~x[,v1])) and R2_2=R2(y~x[,v2])))
 
@@ -91,8 +92,7 @@ output$upper_diff (upper limit of 95\% CI for the difference)
 
 output$lower_diff (lower limit of 95\% CI for the difference)
 -0.0005574975
-
-
+}
 }
 \keyword{R2}
 \keyword{information}

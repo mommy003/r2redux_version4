@@ -21,23 +21,22 @@ its standard error (se) between the observed scale
 and liability scale
 }
 \examples{
-
+\donttest{
 To get the transformed R2
+ output=cc_trf(0.06, 0.002, 0.05, 0.05)
 
-output=cc_trf(0.06, 0.002, 0.05, 0.05)
+ output$R2l (transformed R2 to the liability scale)
+ 0.2679337
 
-output$R2l (transformed R2 to the liability scale)
-0.2679337
+ output$sel (transformed se to the liability scale)
+ 0.008931123
 
-output$sel (transformed se to the liability scale)
-0.008931123
+ output$R2O (transformed R2 to the observed scale)
+ 0.01343616
 
-output$R2O (transformed R2 to the observed scale)
-0.01343616
-
-output$seO (transformed se to the observed scale)
-0.000447872
-
+ output$seO (transformed se to the observed scale)
+ 0.000447872
+ }
 }
 \references{
 Lee, S. H., Goddard, M. E., Wray, N. R., and Visscher, P. M. A better coefficient of determination for genetic profile analysis. Genetic epidemiology,(2012). 36(3): p. 214-224.

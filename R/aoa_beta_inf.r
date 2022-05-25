@@ -11,6 +11,7 @@
   #' @keywords information matrix in the context of correlation
   #' @export
   #' @examples
+  #' \donttest{
   #' To get information (variance-covariance) matrix of beta1^2 and beta2^2 where 
   #' beta1 and 2 are regression coefficients from a multiple regression model.
   #' 
@@ -37,7 +38,7 @@
   #' 
   #' output$var1_2 (variance of difference between beta1^2 and beta2^2)
   #' 1.01141       
- 
+  #' }
 
 
 
