@@ -1,5 +1,5 @@
 # r2redux_version4
-# r2redux
+
 The ‘r2redux’ package can be used to derive test statistics for R2 values from polygenic risk score (PRS) models (variance and covariance of R2 values, p-value and 95% confidence intervals (CI)). For example, it can test if two sets of R2 values from two different PRS models are significantly different to each other whether the two sets of PRS are independent or dependent. Because R2 value is often regarded as the predictive ability of PRS, r2redux package can be useful to assess the performances of PRS methods or multiple sets of PRS based on different information sources. Furthermore, the package can derive the information matrix of beta1^2 and beta2^2 from a multiple regression (see olkin_beta1_2 or olkin_beta_info function in the manual), which is a basis of a novel PRS-based genomic partitioning method (see r2_enrich or r2_enrich_beta function in the manual).  
 
 # INSTALLATION
