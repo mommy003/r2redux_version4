@@ -12,7 +12,7 @@
   #' @export
   #' @examples
   #' \donttest{
-  #' To get information (variance-covariance) matrix of beta1^2 and beta2^2 where 
+  #' To get information (variance-covariance) matrix of beta1 and beta2 where 
   #' beta1 and 2 are regression coefficients from a multiple regression model.
   #' 
   #' dat=read.table("test_ukbb_thresholds_scaled") (see example files)
@@ -30,13 +30,13 @@
   #' 0.2531406 -0.2526212
   #' -0.2526212  0.2530269            
   #' 
-  #' output$var1 (variance of beta1^2)
+  #' output$var1 (variance of beta1)
   #' 0.2531406
   #'             
-  #' output$var2 (variance of beta2^2)
+  #' output$var2 (variance of beta2)
   #' 0.2530269
   #' 
-  #' output$var1_2 (variance of difference between beta1^2 and beta2^2)
+  #' output$var1_2 (variance of difference between beta1 and beta2)
   #' 1.01141       
   #' }
 

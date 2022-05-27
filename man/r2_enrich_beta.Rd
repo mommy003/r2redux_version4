@@ -16,10 +16,10 @@ r2_enrich_beta(dat, v1, v2, nv, exp1)
 \item{v1/v2}{These can be set as v1=1 and v2=2, v1=2 and v2=1, v1=3 and v2=2, or any combination as long as the value is between 1 - M}
 }
 \description{
-This function estimates var(t1/(t1+t2))
+This function estimates var\link{(t1/exp) - (t2/(1-exp))},
 where t1 = beta1^2 and t2 = beta2^2, and
 beta1 and 2 are regression coefficients from a multiple regression model,
-i.e. y = x1â€¢beta1 + x2â€¢beta2 + e, where y, x1 and x2 are column-standardised
+i.e. y = x1•beta1 + x2•beta2 +e, where y, x1 and x2 are column-standardised
 (see Olkin and Finn 1995).
 y is N by 1 matrix having the dependent variable, and
 x1 is N by 1 matrix having the ith explanatory variables.
@@ -32,9 +32,9 @@ Note that r2_enrich (above) and r2_enrich_beta is equivalent (identical p-value 
 \donttest{
 To get the test statistic for the ratio which is significantly
 different from the expectation.
-var(t1/(t1+t2)), where t1 = beta1^2 and t2 = beta2^2.
+var[(t1/exp) - (t2/(1-exp))], where t1 = beta1^2 and t2 = beta2^2.
 beta1 and beta2 are regression coefficients from a multiple regression model,
-i.e. y = x1â€¢beta1 + x2â€¢beta2 + e, where y, x1 and x2 are column-standardised
+i.e. y = x1•beta1 + x2•beta2 +e, where y, x1 and x2 are column-standardised
 
 dat=read.table("test_ukbb_enrichment_choles") (see example file)
 nv=length(dat$V1)
@@ -46,20 +46,20 @@ output
 
 r2redux output
 
+output$beta1_sq (t1)
+0.01118301
+
+output$beta2_sq (t2)
+0.004980285
+
 output$var1 (variance of t1)
 7.072931e-05
 
 output$var2 (variance of t2)
 3.161929e-05
 
-output$var1_2 (difference between t1 and t2)
+output$var1_2 (variance of difference between t1 and t2)
 0.000162113
-
-output$beta1_sq (t1)
-0.01118301
-
-output$beta2_sq (t2)
-0.004980285
 
 output$cov (covariance between t1 and t2)
 -2.988221e-05

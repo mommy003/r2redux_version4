@@ -23,14 +23,14 @@
   #'
   #' r2redux output
   #'
+  #' output$rsq (R2)
+  #' 0.03836254
+  #'
   #' output$var (variance of R2) 
   #' 0.0001437583
   #' 
   #' output$r2_based_p (P-value under the null hypothesis, i.e. R2=0)
   #' 1.213645e-10
-  #' 
-  #' output$mean_r2 (R2)
-  #' 0.03836254
   #' 
   #' output$upper_r2 (upper limit of 95% CI for R2)
   #' 0.06435214
@@ -50,14 +50,14 @@
   #'
   #' r2redux output
   #'
+  #' output$rsq (R2)
+  #' 0.03917668
+  #' 
   #' output$var (variance of R2)
   #' 0.0001499374
   #' 
   #' output$r2_based_p (R2 based P-value)
   #' 7.461267e-11
-  #' 
-  #' output$mean_r2 (R2)
-  #' 0.03917668
   #' 
   #' output$upper_r2 (upper limit of 95% CI for R2)
   #' 0.06538839
@@ -104,7 +104,7 @@
       lci=(lci-lamda-1)/(2*(mv+2*lamda))^.5
       lci=lci*var1^.5+dvr2
 
-      z=list(var=var1,LRT_p=p1,r2_based_p=p2,mean_r2=dvr2,upper_r2=uci,lower_r2=lci)
+      z=list(var=var1,LRT_p=p1,r2_based_p=p2,rsq=dvr2,upper_r2=uci,lower_r2=lci)
       #NOTE: r2_based_p=p2 due to chi^2 distribution
       return(z)
 

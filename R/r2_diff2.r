@@ -25,6 +25,12 @@
   #' output
   #'
   #' r2redux output
+  #'
+  #' output$rsq1 (R2_1)
+  #' 0.03836254
+  #' 
+  #' output$rsq2 (R2_2)
+  #' 0.03881135
   #' 
   #' output$var1 (variance of R2_1)
   #' 0.0001437583
@@ -60,7 +66,13 @@
   #' output
   #'
   #' r2redux output
+  #'
+  #' output$rsq1 (R2_1)
+  #' 0.03896678
   #' 
+  #' output$rsq2 (R2_2)
+  #' 0.03836254
+  #'
   #' output$var1 (variance of R2_1)
   #' 0.0001475195
   #' 

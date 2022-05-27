@@ -33,14 +33,14 @@ output=r2_var(dat,v1,nv)
 
 r2redux output
 
+output$rsq (R2)
+0.03836254
+
 output$var (variance of R2) 
 0.0001437583
 
 output$r2_based_p (P-value under the null hypothesis, i.e. R2=0)
 1.213645e-10
-
-output$mean_r2 (R2)
-0.03836254
 
 output$upper_r2 (upper limit of 95\% CI for R2)
 0.06435214
@@ -60,14 +60,14 @@ output
 
 r2redux output
 
+output$rsq (R2)
+0.03917668
+
 output$var (variance of R2)
 0.0001499374
 
 output$r2_based_p (R2 based P-value)
 7.461267e-11
-
-output$mean_r2 (R2)
-0.03917668
 
 output$upper_r2 (upper limit of 95\% CI for R2)
 0.06538839

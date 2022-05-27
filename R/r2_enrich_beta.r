@@ -1,9 +1,9 @@
 #' r2_enrich_beta
 #'
-#' This function estimates var(t1/(t1+t2))
+#' This function estimates var[(t1/exp) - (t2/(1-exp))], 
 #' where t1 = beta1^2 and t2 = beta2^2, and
 #' beta1 and 2 are regression coefficients from a multiple regression model,
-#' i.e. y = x1â€¢beta1 + x2â€¢beta2 + e, where y, x1 and x2 are column-standardised
+#' i.e. y = x1•beta1 + x2•beta2 +e, where y, x1 and x2 are column-standardised
 #' (see Olkin and Finn 1995).
 #' y is N by 1 matrix having the dependent variable, and
 #' x1 is N by 1 matrix having the ith explanatory variables.
@@ -23,9 +23,9 @@
 #' \donttest{
 #' To get the test statistic for the ratio which is significantly
 #' different from the expectation.
-#' var(t1/(t1+t2)), where t1 = beta1^2 and t2 = beta2^2.
+#' var[(t1/exp) - (t2/(1-exp))], where t1 = beta1^2 and t2 = beta2^2.
 #' beta1 and beta2 are regression coefficients from a multiple regression model,
-#' i.e. y = x1â€¢beta1 + x2â€¢beta2 + e, where y, x1 and x2 are column-standardised
+#' i.e. y = x1•beta1 + x2•beta2 +e, where y, x1 and x2 are column-standardised
 #'
 #' dat=read.table("test_ukbb_enrichment_choles") (see example file)
 #' nv=length(dat$V1)
@@ -37,20 +37,20 @@
 #'
 #' r2redux output
 #'
+#' output$beta1_sq (t1)
+#' 0.01118301
+#' 
+#' output$beta2_sq (t2)
+#' 0.004980285
+#' 
 #' output$var1 (variance of t1)
 #' 7.072931e-05
 #' 
 #' output$var2 (variance of t2)
 #' 3.161929e-05
 #' 
-#' output$var1_2 (difference between t1 and t2)
+#' output$var1_2 (variance of difference between t1 and t2)
 #' 0.000162113
-#' 
-#' output$beta1_sq (t1)
-#' 0.01118301
-#' 
-#' output$beta2_sq (t2)
-#' 0.004980285
 #' 
 #' output$cov (covariance between t1 and t2)
 #' -2.988221e-05
@@ -133,7 +133,9 @@ r2_enrich_beta = function (dat,v1,v2,nv,exp1) {
   
   #z=list(var1=var1,var2=var2,var1_2=var1_2,beta1_sq=dvr1,beta2_sq=dvr2,cov=cov,ratio1=ratio1,ratio2=ratio2,ratio1_var=ratio1_var,ratio2_var=ratio2_var,enrich_p=p3,upper_ratio1=uci,lower_ratio1=lci)
   #z=list(var1=var1,var2=var2,var1_2=var1_2,beta1_sq=dvr1,beta2_sq=dvr2,cov=cov,ratio=ratio1,ratio_var=ratio1_var,enrich_p=p3,upper_ratio=uci,lower_ratio=lci)
-  z=list(var1=var1,var2=var2,var1_2=var1_2,beta1_sq=dvr1,beta2_sq=dvr2,cov=cov,ratio=ratio1,ratio_var=ratio1_var,enrich_p=p3,upper_ratio=uci,lower_ratio=lci,enrich_p2=p4,mean_diff=dvr3,var_diff=var_dvr3,upper_diff=uci2,lower_diff=lci2)
+  #enrich_p=p3 excleded from Z list
+
+  z=list(var1=var1,var2=var2,var1_2=var1_2,beta1_sq=dvr1,beta2_sq=dvr2,cov=cov,ratio=ratio1,ratio_var=ratio1_var,upper_ratio=uci,lower_ratio=lci,enrich_p2=p4,mean_diff=dvr3,var_diff=var_dvr3,upper_diff=uci2,lower_diff=lci2)
   return(z)
   
   
