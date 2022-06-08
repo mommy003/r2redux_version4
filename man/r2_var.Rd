@@ -23,7 +23,7 @@ v1 indicates the ith column in the x matrix
 (v1 can be multiple values between 1 - M, see Arguments below)
 }
 \examples{
-\donttest{
+\dontrun{
 To get the test statistics for R2(y~x[,v1])
 
 dat=read.table("test_ukbb_thresholds_scaled") (see example file)

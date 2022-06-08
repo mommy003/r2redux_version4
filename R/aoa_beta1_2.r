@@ -11,8 +11,9 @@
   #' @param nv sample size
   #' @keywords information matrix in the context of correlation
   #' @export
+  #' @importFrom stats D cor dnorm lm logLik pchisq qchisq qnorm
   #' @examples
-  #' \donttest{
+  #' \dontrun{
   #' To get information (variance-covariance) matrix of beta1^2 and beta2^2 where 
   #' beta1 and 2 are regression coefficients from a multiple regression model.
   #' 
@@ -39,8 +40,8 @@
   #' 
   #' output$var1_2 (variance of difference between beta1^2 and beta2^2)
   #' 0.03940878
-  #' }        
-
+  #' }
+  
 
 
   olkin_beta1_2 = function (omat,nv) {

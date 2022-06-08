@@ -21,7 +21,7 @@ its standard error (se) between the observed scale
 and liability scale
 }
 \examples{
-\donttest{
+\dontrun{
 To get the transformed R2
  output=cc_trf(0.06, 0.002, 0.05, 0.05)
 

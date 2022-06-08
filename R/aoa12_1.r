@@ -1,3 +1,4 @@
+#' @importFrom stats D cor dnorm lm logLik pchisq qchisq qnorm  
 
   olkin12_1 = function (omat,nv) {
 

@@ -10,8 +10,9 @@
   #' @param nv sample size
   #' @keywords information matrix in the context of correlation
   #' @export
+  #' @importFrom stats D cor dnorm lm logLik pchisq qchisq qnorm
   #' @examples
-  #' \donttest{
+  #' \dontrun{
   #' To get information (variance-covariance) matrix of beta1 and beta2 where 
   #' beta1 and 2 are regression coefficients from a multiple regression model.
   #' 
@@ -39,8 +40,7 @@
   #' output$var1_2 (variance of difference between beta1 and beta2)
   #' 1.01141       
   #' }
-
-
+ 
 
   olkin_beta_inf = function (omat,nv) {
 

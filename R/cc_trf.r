@@ -11,8 +11,9 @@
   #' @param P The ratio of cases in the study samples
   #' @keywords Transformation of R2 between observed scale and liability scale
   #' @export
+  #' @importFrom stats D cor dnorm lm logLik pchisq qchisq qnorm
   #' @examples
-  #' \donttest{
+  #' \dontrun{
   #' To get the transformed R2
   #'  output=cc_trf(0.06, 0.002, 0.05, 0.05)
   #'
@@ -28,6 +29,8 @@
   #'  output$seO (transformed se to the observed scale)
   #'  0.000447872
   #'  }
+
+  
 
 
 

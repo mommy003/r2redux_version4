@@ -9,14 +9,16 @@ r2_enrich_beta(dat, v1, v2, nv, exp1)
 \arguments{
 \item{dat}{N by (M+1) matrix having variables in the order of cbind(y,x)}
 
+\item{v1}{These can be set as v1=1, v1=2, v1=3  or any value between 1 - M based on combination}
+
+\item{v2}{These can be set as v2=2, v2=1, v2=2, or any value between 1 - M based on combination}
+
 \item{nv}{sample size}
 
 \item{exp1}{The expectation of the ratio (e.g. ratio of # SNPs in genomic partitioning)}
-
-\item{v1/v2}{These can be set as v1=1 and v2=2, v1=2 and v2=1, v1=3 and v2=2, or any combination as long as the value is between 1 - M}
 }
 \description{
-This function estimates var\link{(t1/exp) - (t2/(1-exp))},
+This function estimates var((t1/exp) - (t2/(1-exp))),
 where t1 = beta1^2 and t2 = beta2^2, and
 beta1 and 2 are regression coefficients from a multiple regression model,
 i.e. y = x1•beta1 + x2•beta2 +e, where y, x1 and x2 are column-standardised
@@ -29,12 +31,12 @@ v1 and v2 indicates the ith and jth column in the data
 Note that r2_enrich (above) and r2_enrich_beta is equivalent (identical p-value derived).
 }
 \examples{
-\donttest{
+\dontrun{
 To get the test statistic for the ratio which is significantly
 different from the expectation.
 var[(t1/exp) - (t2/(1-exp))], where t1 = beta1^2 and t2 = beta2^2.
 beta1 and beta2 are regression coefficients from a multiple regression model,
-i.e. y = x1•beta1 + x2•beta2 +e, where y, x1 and x2 are column-standardised
+i.e. y = x1â€¢beta1 + x2â€¢beta2 +e, where y, x1 and x2 are column-standardised
 
 dat=read.table("test_ukbb_enrichment_choles") (see example file)
 nv=length(dat$V1)

@@ -12,8 +12,9 @@
   #' @param nv sample size
   #' @keywords R2 variance information matrix
   #' @export
+  #' @importFrom stats D cor dnorm lm logLik pchisq qchisq qnorm
   #' @examples 
-  #' \donttest{
+  #' \dontrun{
   #' To get the test statistics for R2(y~x[,v1])
   #' 
   #' dat=read.table("test_ukbb_thresholds_scaled") (see example file)
@@ -65,6 +66,8 @@
   #' output$lower_r2 (lower limit of 95% CI for R2)
   #' 0.01821657
   #' }
+
+  
 
   r2_var = function (dat,v1,nv) {
     #source("aoa12_1.r")

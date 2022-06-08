@@ -12,8 +12,9 @@
   #' @param nv sample size
   #' @keywords R2 variance information matrix
   #' @export
+  #' @importFrom stats D cor dnorm lm logLik pchisq qchisq qnorm
   #' @examples
-  #' \donttest{
+  #' \dontrun{
   #' To get the test statistics for the difference between R2(y~x[,v1]) and 
   #' R2(y~x[,v2]). (here we define R2_1=R2(y~x[,v1])) and R2_2=R2(y~x[,v2])))
   #'
@@ -95,7 +96,7 @@
   #' -0.0005574975
   #' }
  
-
+  
 
   r2_diff = function (dat,v1,v2,nv) {
     source("aoa12_1.r")

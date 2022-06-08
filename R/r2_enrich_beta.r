@@ -1,6 +1,6 @@
 #' r2_enrich_beta
 #'
-#' This function estimates var[(t1/exp) - (t2/(1-exp))], 
+#' This function estimates var((t1/exp) - (t2/(1-exp))), 
 #' where t1 = beta1^2 and t2 = beta2^2, and
 #' beta1 and 2 are regression coefficients from a multiple regression model,
 #' i.e. y = x1•beta1 + x2•beta2 +e, where y, x1 and x2 are column-standardised
@@ -14,18 +14,20 @@
 #' @references
 #' Olkin, I. and J.D. Finn, Correlations redux. Psychological Bulletin, 1995. 118(1): p. 155.
 #' @param dat N by (M+1) matrix having variables in the order of cbind(y,x)
-#' @param v1/v2 These can be set as v1=1 and v2=2, v1=2 and v2=1, v1=3 and v2=2, or any combination as long as the value is between 1 - M
+#' @param v1 These can be set as v1=1, v1=2, v1=3  or any value between 1 - M based on combination
+#' @param v2 These can be set as v2=2, v2=1, v2=2, or any value between 1 - M based on combination 
 #' @param nv sample size
 #' @param exp1 The expectation of the ratio (e.g. ratio of # SNPs in genomic partitioning)
 #' @keywords variance of ratio between beta^2 from a multiple regression
 #' @export
-#' @examples
-#' \donttest{
+#' @importFrom stats D cor dnorm lm logLik pchisq qchisq qnorm
+#' @examples 
+#' \dontrun{
 #' To get the test statistic for the ratio which is significantly
 #' different from the expectation.
 #' var[(t1/exp) - (t2/(1-exp))], where t1 = beta1^2 and t2 = beta2^2.
 #' beta1 and beta2 are regression coefficients from a multiple regression model,
-#' i.e. y = x1•beta1 + x2•beta2 +e, where y, x1 and x2 are column-standardised
+#' i.e. y = x1â€¢beta1 + x2â€¢beta2 +e, where y, x1 and x2 are column-standardised
 #'
 #' dat=read.table("test_ukbb_enrichment_choles") (see example file)
 #' nv=length(dat$V1)
@@ -70,8 +72,6 @@
 #' output$lower_diff (lower limit of 95% CI for the mean difference)
 #' -0.1450549
 #' }
-
-
 
 
 
