@@ -13,6 +13,9 @@ r2_var(dat, v1, nv)
 
 \item{nv}{sample size}
 }
+\value{
+this function will test the null hypothesis for R2.Output from the command is the lists of outcomes.
+}
 \description{
 This function estimates var(R2(y~x[,v1]))
 where R2 is the R squared value of the model,

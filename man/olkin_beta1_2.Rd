@@ -11,6 +11,9 @@ olkin_beta1_2(omat, nv)
 
 \item{nv}{sample size}
 }
+\value{
+this function will give information (variance-covariance) matrix of beta1^2 and beta2^2.Output from the command is the lists of outcomes.
+}
 \description{
 This function derives Information matrix for beta1^2 and beta2^2
 where beta1 and 2 are regression coefficients from a multiple regression model,

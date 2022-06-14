@@ -13,7 +13,8 @@
   #' @keywords R2 variance information matrix
   #' @export
   #' @importFrom stats D cor dnorm lm logLik pchisq qchisq qnorm
-  #' @examples 
+  #' @return  this function will test the null hypothesis for R2.Output from the command is the lists of outcomes.
+  #' @examples
   #' \dontrun{
   #' To get the test statistics for R2(y~x[,v1])
   #' 
@@ -66,6 +67,8 @@
   #' output$lower_r2 (lower limit of 95% CI for R2)
   #' 0.01821657
   #' }
+
+
 
   
 

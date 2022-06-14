@@ -13,6 +13,7 @@
   #' @keywords R2 variance information matrix
   #' @export
   #' @importFrom stats D cor dnorm lm logLik pchisq qchisq qnorm
+  #' @return  this function will estimate significant difference between two PGS (either dependent or independent and joint or single).Output from the command is the lists of outcomes.
   #' @examples
   #' \dontrun{
   #' To get the test statistics for the difference between R2(y~x[,v1]) and 
@@ -96,14 +97,17 @@
   #' -0.0005574975
   #' }
  
+
+   
+ 
   
 
   r2_diff = function (dat,v1,v2,nv) {
-    source("aoa12_1.r")
-    source("aoa12_13.r")
-    source("aoa1_2.r")
-    source("aoa12_3.r")
-    source("aoa12_34.r")
+   # source("aoa12_1.r")
+   # source("aoa12_13.r")
+   # source("aoa1_2.r")
+   # source("aoa12_3.r")
+   # source("aoa12_34.r")
 
     dat=scale(dat);omat=cor(dat)
 

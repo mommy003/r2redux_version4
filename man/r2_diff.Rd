@@ -15,6 +15,9 @@ r2_diff(dat, v1, v2, nv)
 
 \item{nv}{sample size}
 }
+\value{
+this function will estimate significant difference between two PGS (either dependent or independent and joint or single).Output from the command is the lists of outcomes.
+}
 \description{
 This function estimates var(R2(y~x[,v1]) - R2(y~x[,v2]))
 where R2 is the R squared value of the model,

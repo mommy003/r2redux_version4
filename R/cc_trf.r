@@ -12,23 +12,26 @@
   #' @keywords Transformation of R2 between observed scale and liability scale
   #' @export
   #' @importFrom stats D cor dnorm lm logLik pchisq qchisq qnorm
+  #' @return  this function will transform the R2 and its s.e between observed scale and liability scale.Output from the command is the lists of outcomes.
   #' @examples
   #' \dontrun{
   #' To get the transformed R2
-  #'  output=cc_trf(0.06, 0.002, 0.05, 0.05)
+  #' output=cc_trf(0.06, 0.002, 0.05, 0.05)
   #'
-  #'  output$R2l (transformed R2 to the liability scale)
-  #'  0.2679337
+  #' output$R2l (transformed R2 to the liability scale)
+  #' 0.2679337
   #'
-  #'  output$sel (transformed se to the liability scale)
-  #'  0.008931123
+  #' output$sel (transformed se to the liability scale)
+  #' 0.008931123
   #'
-  #'  output$R2O (transformed R2 to the observed scale)
-  #'  0.01343616
+  #' output$R2O (transformed R2 to the observed scale)
+  #' 0.01343616
   #'
-  #'  output$seO (transformed se to the observed scale)
-  #'  0.000447872
+  #' output$seO (transformed se to the observed scale)
+  #' 0.000447872
   #'  }
+
+ 
 
   
 

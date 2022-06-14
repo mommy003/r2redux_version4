@@ -21,13 +21,14 @@
 #' @keywords variance of ratio between beta^2 from a multiple regression
 #' @export
 #' @importFrom stats D cor dnorm lm logLik pchisq qchisq qnorm
-#' @examples 
+#' @return  this function will test the ratio which is significantly different from the expectation.Output from the command is the lists of outcomes.
+#' @examples
 #' \dontrun{
 #' To get the test statistic for the ratio which is significantly
 #' different from the expectation.
 #' var[(t1/exp) - (t2/(1-exp))], where t1 = beta1^2 and t2 = beta2^2.
 #' beta1 and beta2 are regression coefficients from a multiple regression model,
-#' i.e. y = x1â€¢beta1 + x2â€¢beta2 +e, where y, x1 and x2 are column-standardised
+#' i.e. y = x1Ã¢â‚¬Â¢beta1 + x2Ã¢â‚¬Â¢beta2 +e, where y, x1 and x2 are column-standardised
 #'
 #' dat=read.table("test_ukbb_enrichment_choles") (see example file)
 #' nv=length(dat$V1)
@@ -75,13 +76,14 @@
 
 
 
+
 r2_enrich_beta = function (dat,v1,v2,nv,exp1) {
   #source("aoa12_1.r")
   #source("aoa12_13.r")
   #source("aoa1_2.r")
   #source("aoa12_3.r")
   #source("aoa12_34.r")
-  source("aoa_beta1_2.r")
+  #  source("aoa_beta1_2.r")
   
   dat=scale(dat);omat=cor(dat)
   

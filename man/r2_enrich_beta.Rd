@@ -17,6 +17,9 @@ r2_enrich_beta(dat, v1, v2, nv, exp1)
 
 \item{exp1}{The expectation of the ratio (e.g. ratio of # SNPs in genomic partitioning)}
 }
+\value{
+this function will test the ratio which is significantly different from the expectation.Output from the command is the lists of outcomes.
+}
 \description{
 This function estimates var((t1/exp) - (t2/(1-exp))),
 where t1 = beta1^2 and t2 = beta2^2, and
@@ -36,7 +39,7 @@ To get the test statistic for the ratio which is significantly
 different from the expectation.
 var[(t1/exp) - (t2/(1-exp))], where t1 = beta1^2 and t2 = beta2^2.
 beta1 and beta2 are regression coefficients from a multiple regression model,
-i.e. y = x1â€¢beta1 + x2â€¢beta2 +e, where y, x1 and x2 are column-standardised
+i.e. y = x1Ã¢â‚¬Â¢beta1 + x2Ã¢â‚¬Â¢beta2 +e, where y, x1 and x2 are column-standardised
 
 dat=read.table("test_ukbb_enrichment_choles") (see example file)
 nv=length(dat$V1)

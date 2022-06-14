@@ -12,6 +12,7 @@
   #' @keywords information matrix in the context of correlation
   #' @export
   #' @importFrom stats D cor dnorm lm logLik pchisq qchisq qnorm
+  #' @return  this function will give information (variance-covariance) matrix of beta1^2 and beta2^2.Output from the command is the lists of outcomes.
   #' @examples
   #' \dontrun{
   #' To get information (variance-covariance) matrix of beta1^2 and beta2^2 where 
@@ -41,6 +42,7 @@
   #' output$var1_2 (variance of difference between beta1^2 and beta2^2)
   #' 0.03940878
   #' }
+  
   
 
 
