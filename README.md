@@ -30,7 +30,7 @@ r2redux requires only phenotype and estimated PRS (from PLINK or any other softw
 - PRS for p value 0.001 (x9)
 - PRS for p value 0.0001 (x10)
 
-To get the test statistics for the difference between R^2(y~x[,v1]) and R^2(y~x[,v2]). (here we define R_1^2= R^2(y~x[,v1])) and R_2^2=R^2(y~x[,v2])))
+To get the test statistics for the difference between R2(y=x[,v1]) and R2(yx[,v2]). (here we define R_1^2= R^2(y=x[,v1])) and R_2^2=R^2(y=x[,v2])))
 dat=read.table("test_ukbb_thresholds_scaled") (see example files)
 nv=length(dat$V1)
 v1=c(1)
