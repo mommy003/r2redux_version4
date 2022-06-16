@@ -15,7 +15,7 @@ We illustrate the usage of r2redux using multiple sets of PRS estimated based on
 
 # DATA PREPARATION
 **a.	Statistical testing of significant difference between R2 values for p-value thresholds:** 
-r2redux requires only phenotype and estimated PRS (from PLINK or any other software). Note that any missing value in the phenotypes and PRS tested in the model should be removed. If we want to test the significant difference of R^2 values for p-value thresholds, r2_diff function can be used with an input file that includes the following fields (also see test_ukbb_thresholds_scaled in the example directory form github and r2_diff function in the manual).
+r2redux requires only phenotype and estimated PRS (from PLINK or any other software). Note that any missing value in the phenotypes and PRS tested in the model should be removed. If we want to test the significant difference of R^2 values for p-value thresholds, r2_diff function can be used with an input file that includes the following fields (also see test_ukbb_thresholds_scaled in the example directory and r2_diff function in the manual).
 
 
 - Phenotype (y)
