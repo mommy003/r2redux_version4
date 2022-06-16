@@ -38,6 +38,7 @@ If we want to perform some enrichment analysis (e.g., regulatory vs non_regulato
 
 # References
 Olkin, I. and J.D. Finn, Correlations redux. Psychological Bulletin, 1995. 118(1): p. 155.
+Momin, M.M., Lee, S., Wray, N.R. and Lee S.h. 2022. Significance tests for R2 of out-of-sample prediction using polygenic scores. bioRxiv.
 
 # Contact information
 Please contact Hong Lee (hong.lee@unisa.edu.au) or Moksedul Momin (cvasu.momin@gmail.com) if you have any queries.
