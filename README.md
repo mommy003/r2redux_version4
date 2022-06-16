@@ -31,27 +31,27 @@ r2redux requires only phenotype and estimated PRS (from PLINK or any other softw
 - PRS for p value 0.0001 (x10)
 
 To get the test statistics for the difference between R2(y=x[,v1]) and R2(yx[,v2]). (here we define R_1^2= R^2(y=x[,v1])) and R_2^2=R^2(y=x[,v2])))
-dat=read.table("test_ukbb_thresholds_scaled") (see example files)
+- dat=read.table("test_ukbb_thresholds_scaled") (see example files)
 - nv=length(dat$V1)
 - v1=c(1)
 - v2=c(2)
 - output=r2_diff(dat,v1,v2,nv)
 
--r2redux output
--output$var1 (variance of R_1^2)
--0.0001437583
--output$var2 (variance of R_2^2)
--0.0001452828
--output$var_diff (variance of difference between R_1^2and R_2^2)
--5.678517e-07
--output$r2_based_p (p-value for significant difference between R_1^2  and R_2^2)
--0.5514562
--output$mean_diff (differences between R_1^2 and R_2^2)
---0.0004488044
--output$upper_diff (upper limit of 95% CI for the difference)
--0.001028172
--output$lower_diff (lower limit of 95% CI for the difference)
---0.001925781
+- r2redux output
+- output$var1 (variance of R_1^2)
+- 0.0001437583
+- output$var2 (variance of R_2^2)
+- 0.0001452828
+- output$var_diff (variance of difference between R_1^2and R_2^2)
+- 5.678517e-07
+- output$r2_based_p (p-value for significant difference between R_1^2  and R_2^2)
+- 0.5514562
+- output$mean_diff (differences between R_1^2 and R_2^2)
+- -0.0004488044
+- output$upper_diff (upper limit of 95% CI for the difference)
+- 0.001028172
+- output$lower_diff (lower limit of 95% CI for the difference)
+- -0.001925781
 
  
 **b. PRS-based genomic enrichment analysis:**
@@ -62,36 +62,37 @@ If we want to perform some enrichment analysis (e.g., regulatory vs non_regulato
 
 To get the test statistic for the ratio which is significantly different from the expectation. var(t_1/p_exp -t_2/(1-p_exp )), where t_1 = β ̂_1^2  and t_2 = β ̂_2^2. β_1 and β_2 are regression coefficients from a multiple regression model, i.e. y=x_1.β_1+ x_2.β_2+e, where y, x_1 and x_2 are column standardised.
 
-dat=read.table("test_ukbb_enrichment_choles") (see example file)
-nv=length(dat$V1)
-v1=c(1)
-v2=c(2)
-expected_ratio=0.04
-output=r2_enrich_beta(dat,v1,v2,nv,expected_ratio)
-output
-r2redux output
-output$beta1_sq (t_1)
-0.01118301
-output$beta2_sq (t_2)
-0.004980285
-output$var1 (variance of t_1)
-7.072931e-05
-output$var2 (variance of t_2)
-3.161929e-05
-output$var1_2 (variance of difference between t_1 and t_2) 
-0.000162113  
-output$cov (covariance between t_1 and t_2) 
--2.988221e-05
-output$enrich_p2 (p-value for testing the difference between t_1/p_exp   and t_2/(1-p_exp ))
-0.1997805
-output$mean_diff (difference between t_1/p_exp   and t_2/(1-p_exp ))
-0.2743874
-output$var_diff (variance of difference, t_1/p_exp -t_2/(1-p_exp ))
-0.04579649
-output$upper_diff (upper limit of 95% CI for the mean difference)
-0.6938296
-output$lower_diff (lower limit of 95% CI for the mean difference)
--0.1450549
+- dat=read.table("test_ukbb_enrichment_choles") (see example file)
+- nv=length(dat$V1)
+- v1=c(1)
+- v2=c(2)
+- expected_ratio=0.04
+- output=r2_enrich_beta(dat,v1,v2,nv,expected_ratio)
+- output
+
+- r2redux output
+- output$beta1_sq (t_1)
+- 0.01118301
+- output$beta2_sq (t_2)
+- 0.004980285
+- output$var1 (variance of t_1)
+- 7.072931e-05
+- output$var2 (variance of t_2)
+- 3.161929e-05
+- output$var1_2 (variance of difference between t_1 and t_2) 
+- 0.000162113  
+- output$cov (covariance between t_1 and t_2) 
+- -2.988221e-05
+- output$enrich_p2 (p-value for testing the difference between t_1/p_exp   and t_2/(1-p_exp ))
+- 0.1997805
+- output$mean_diff (difference between t_1/p_exp   and t_2/(1-p_exp ))
+- 0.2743874
+- output$var_diff (variance of difference, t_1/p_exp -t_2/(1-p_exp ))
+- 0.04579649
+- output$upper_diff (upper limit of 95% CI for the mean difference)
+- 0.6938296
+- output$lower_diff (lower limit of 95% CI for the mean difference)
+- -0.1450549
 
 
 # References
