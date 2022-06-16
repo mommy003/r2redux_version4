@@ -36,6 +36,7 @@ nv=length(dat$V1)
 v1=c(1)
 v2=c(2)
 output=r2_diff(dat,v1,v2,nv)
+
 r2redux output
 output$var1 (variance of R_1^2)
 0.0001437583
@@ -44,7 +45,7 @@ output$var2 (variance of R_2^2)
 output$var_diff (variance of difference between R_1^2and R_2^2)
 5.678517e-07
 output$r2_based_p (p-value for significant difference between R_1^2  and R_2^2)
- 0.5514562
+0.5514562
 output$mean_diff (differences between R_1^2 and R_2^2)
 -0.0004488044
 output$upper_diff (upper limit of 95% CI for the difference)
