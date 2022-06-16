@@ -32,26 +32,26 @@ r2redux requires only phenotype and estimated PRS (from PLINK or any other softw
 
 To get the test statistics for the difference between R2(y=x[,v1]) and R2(yx[,v2]). (here we define R_1^2= R^2(y=x[,v1])) and R_2^2=R^2(y=x[,v2])))
 dat=read.table("test_ukbb_thresholds_scaled") (see example files)
-nv=length(dat$V1)
-v1=c(1)
-v2=c(2)
-output=r2_diff(dat,v1,v2,nv)
+-nv=length(dat$V1)
+-v1=c(1)
+-v2=c(2)
+-output=r2_diff(dat,v1,v2,nv)
 
-r2redux output
-output$var1 (variance of R_1^2)
-0.0001437583
-output$var2 (variance of R_2^2)
-0.0001452828
-output$var_diff (variance of difference between R_1^2and R_2^2)
-5.678517e-07
-output$r2_based_p (p-value for significant difference between R_1^2  and R_2^2)
-0.5514562
-output$mean_diff (differences between R_1^2 and R_2^2)
--0.0004488044
-output$upper_diff (upper limit of 95% CI for the difference)
-0.001028172
-output$lower_diff (lower limit of 95% CI for the difference)
--0.001925781
+-r2redux output
+-output$var1 (variance of R_1^2)
+-0.0001437583
+-output$var2 (variance of R_2^2)
+-0.0001452828
+-output$var_diff (variance of difference between R_1^2and R_2^2)
+-5.678517e-07
+-output$r2_based_p (p-value for significant difference between R_1^2  and R_2^2)
+-0.5514562
+-output$mean_diff (differences between R_1^2 and R_2^2)
+--0.0004488044
+-output$upper_diff (upper limit of 95% CI for the difference)
+-0.001028172
+-output$lower_diff (lower limit of 95% CI for the difference)
+--0.001925781
 
  
 **b. PRS-based genomic enrichment analysis:**
