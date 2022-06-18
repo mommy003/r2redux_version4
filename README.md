@@ -1,6 +1,6 @@
 # r2redux_version4
 
-The ‘r2redux’ package can be used to derive test statistics for R2 values from polygenic risk score (PRS) models (variance and covariance of R2 values, p-value and 95% confidence intervals (CI)). For example, it can test if two sets of R2 values from two different PRS models are significantly different to each other whether the two sets of PRS are independent or dependent. Because R2 value is often regarded as the predictive ability of PRS, r2redux package can be useful to assess the performances of PRS methods or multiple sets of PRS based on different information sources. Furthermore, the package can derive the information matrix of beta1^2 and beta2^2 from a multiple regression (see olkin_beta1_2 or olkin_beta_info function in the manual), which is a basis of a novel PRS-based genomic partitioning method (see r2_enrich or r2_enrich_beta function in the manual). It is recommended that the target sample size in the PGS study should be more than 2,000 for quantitative traits (Supplementary Figure 27) and more than 5,000 for binary responses or case-control studies (Supplementary Figures 28 and 29). The p-value generated from r2redux is a two-tail test. Depending on hypothesis, one-tail p-value can be obtained as the two-tail p-value divided by 2
+The ‘r2redux’ package can be used to derive test statistics for R2 values from polygenic score (PGS) models (variance and covariance of R2 values, p-value and 95% confidence intervals (CI)). For example, it can test if two sets of R2 values from two different PGS models are significantly different to each other whether the two sets of PGS are independent or dependent. Because R2 value is often regarded as the predictive ability of PGS, r2redux package can be useful to assess the performances of PGS methods or multiple sets of PRS based on different information sources. Furthermore, the package can derive the information matrix of beta1^2 and beta2^2 from a multiple regression (see olkin_beta1_2 or olkin_beta_info function in the manual), which is a basis of a novel PGS-based genomic partitioning method (see r2_enrich or r2_enrich_beta function in the manual). It is recommended that the target sample size in the PGS study should be more than 2,000 for quantitative traits (Supplementary Figure 27) and more than 5,000 for binary responses or case-control studies (Supplementary Figures 28 and 29). The p-value generated from r2redux is a two-tail test. Depending on hypothesis, one-tail p-value can be obtained as the two-tail p-value divided by 2
 
 # INSTALLATION
 To use r2redux:
@@ -11,24 +11,24 @@ To use r2redux:
 - library(r2redux)
 
 # QUICK START
-We illustrate the usage of r2redux using multiple sets of PRS estimated based on GWAS summary statistics from UK Biobank or Biobank Japan (reference datasets). In a target dataset, the phenotypes of target samples (y) can be predicted with PRS (a PRS model, e.g. y = PRS + e where y and PRS are column-standardised (Olkin and Finn 1995)). Note that the target individuals should be independent from reference individuals. We can test the significant differences of the predictive ability (R2) between a pair of PRS (see r2_diff function and example in the manual). 
+We illustrate the usage of r2redux using multiple sets of PGS estimated based on GWAS summary statistics from UK Biobank or Biobank Japan (reference datasets). In a target dataset, the phenotypes of target samples (y) can be predicted with PGS (a PGS model, e.g. y = PGS + e where y and PGS are column-standardised (Olkin and Finn 1995)). Note that the target individuals should be independent from reference individuals. We can test the significant differences of the predictive ability (R2) between a pair of PRS (see r2_diff function and example in the manual). 
 
 # DATA PREPARATION
 **a.	Statistical testing of significant difference between R2 values for p-value thresholds:** 
-r2redux requires only phenotype and estimated PRS (from PLINK or any other software). Note that any missing value in the phenotypes and PRS tested in the model should be removed. If we want to test the significant difference of R^2 values for p-value thresholds, r2_diff function can be used with an input file that includes the following fields (also see test_ukbb_thresholds_scaled in the example directory and r2_diff function in the manual).
+r2redux requires only phenotype and estimated PGS (from PLINK or any other software). Note that any missing value in the phenotypes and PGS tested in the model should be removed. If we want to test the significant difference of R^2 values for p-value thresholds, r2_diff function can be used with an input file that includes the following fields (also see test_ukbb_thresholds_scaled in the example directory and r2_diff function in the manual).
 
 
 - Phenotype (y)
-- PRS for p value 1 (x1)
-- PRS for p value 0.5 (x2)
-- PRS for p value 0.4 (x3)
-- PRS for p value 0.3 (x4)
-- PRS for p value 0.2 (x5)
-- PRS for p value 0.1 (x6)
-- PRS for p value 0.05 (x7)
-- PRS for p value 0.01 (x8)
-- PRS for p value 0.001 (x9)
-- PRS for p value 0.0001 (x10)
+- PGS for p value 1 (x1)
+- PGS for p value 0.5 (x2)
+- PGS for p value 0.4 (x3)
+- PGS for p value 0.3 (x4)
+- PGS for p value 0.2 (x5)
+- PGS for p value 0.1 (x6)
+- PGS for p value 0.05 (x7)
+- PGS for p value 0.01 (x8)
+- PGS for p value 0.001 (x9)
+- PGS for p value 0.0001 (x10)
 
 To get the test statistics for the difference between R2(y=x[,v1]) and R2(yx[,v2]). (here we define R_1^2= R^2(y=x[,v1])) and R_2^2=R^2(y=x[,v2])))
 - dat=read.table("test_ukbb_thresholds_scaled") (see example files)
@@ -54,11 +54,11 @@ To get the test statistics for the difference between R2(y=x[,v1]) and R2(yx[,v2
 - -0.001925781
 
  
-**b. PRS-based genomic enrichment analysis:**
-If we want to perform some enrichment analysis (e.g., regulatory vs non_regulatory) in the PRS context to test significantly different from the expectation (4% = # SNPs in the regulatory / total # SNPs). We simultaneously fit two sets of PRS from regulatory and non-regulatory to get Î²_regu^2 and Î²_non_regu^2, using a multiple regression, and assess if the differences, (Î²_regu^2/expectation) - (Î²_non_regu^2/(1-expectation)), is significantly different from the null hypothesis. To test this, we need to prepare input file for r2redux that includes the following fields (e.g. test_ukbb_enrichment_choles in example directory and r2_enrich_beta function in the manual).
+**b. PGS-based genomic enrichment analysis:**
+If we want to perform some enrichment analysis (e.g., regulatory vs non_regulatory) in the PGS context to test significantly different from the expectation (4% = # SNPs in the regulatory / total # SNPs). We simultaneously fit two sets of PGS from regulatory and non-regulatory to get Î²_regu^2 and Î²_non_regu^2, using a multiple regression, and assess if the differences, (Î²_regu^2/expectation) - (Î²_non_regu^2/(1-expectation)), is significantly different from the null hypothesis. To test this, we need to prepare input file for r2redux that includes the following fields (e.g. test_ukbb_enrichment_choles in example directory and r2_enrich_beta function in the manual).
 - Phenotype (y)
-- PRS for regulatory region (x1)
-- PRS for non-regulatory region (x2)      
+- PGS for regulatory region (x1)
+- PGS for non-regulatory region (x2)      
 
 To get the test statistic for the ratio which is significantly different from the expectation. var(t_1/p_exp -t_2/(1-p_exp )), where t_1 = β ̂_1^2  and t_2 = β ̂_2^2. β_1 and β_2 are regression coefficients from a multiple regression model, i.e. y=x_1.β_1+ x_2.β_2+e, where y, x_1 and x_2 are column standardised.
 
