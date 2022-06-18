@@ -12,7 +12,7 @@ olkin12_13(omat, nv)
 \item{nv}{sample size}
 }
 \value{
-this function will be used as source code
+This function will be used as source code
 }
 \description{
 olkin12_13 function
