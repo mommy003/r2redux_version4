@@ -9,12 +9,12 @@
   #' @param dat N by (M+1) matrix having variables in the order of cbind(y,x)
   #' @param v1 This can be set as v1=c(1) or v1=c(1,2)
   #' @param v2 This can be set as v2=c(2), v2=c(3), v2=c(1,3) or v2=c(3,4)
-  #' @param nv sample size
+  #' @param nv Sample size
   #' @keywords R2 variance information matrix
   #' 
   #' @export
   #' @importFrom stats D cor dnorm lm logLik pchisq qchisq qnorm
-  #' @return  This function will estimate significant difference between two PGS (either dependent or independent and joint or single). To get the test statistics for the difference between R2(y~x\[,v1]) and R2(y~x\[,v2]). (here we define R2_1=R2(y~x\[,v1])) and R2_2=R2(y~x\[,v2]))). Lists of outputs are listed as follows.
+  #' @return  This function will estimate significant difference between two PGS (either dependent or independent and joint or single). To get the test statistics for the difference between R2(y~x\[,v1]) and R2(y~x\[,v2]). (here we define R2_1=R2(y~x\[,v1])) and R2_2=R2(y~x\[,v2]))). The outputs are listed as follows.
   #' \item{rsq1}{R2_1}
   #' \item{rsq2}{R2_2}
   #' \item{var1}{Variance of R2_1}

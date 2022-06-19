@@ -15,13 +15,13 @@
 #' Olkin, I. and J.D. Finn, Correlations redux. Psychological Bulletin, 1995. 118(1): p. 155.
 #' @param dat N by (M+1) matrix having variables in the order of cbind(y,x)
 #' @param v1 These can be set as v1=1, v1=2, v1=3  or any value between 1 - M based on combination
-#' @param v2 These can be set as v2=2, v2=1, v2=2, or any value between 1 - M based on combination 
-#' @param nv sample size
+#' @param v2 These can be set as v2=1, v2=2, v2=3, or any value between 1 - M based on combination 
+#' @param nv Sample size
 #' @param exp1 The expectation of the ratio (e.g. ratio of # SNPs in genomic partitioning)
 #' @keywords variance of ratio between beta^2 from a multiple regression
 #' @export
 #' @importFrom stats D cor dnorm lm logLik pchisq qchisq qnorm
-#' @return  This function will test the ratio which is significantly different from the expectation.To get the test statistic for the ratio which is significantly different from the expectation. var\[(t1/exp)-(t2/(1-exp))], where t1 = beta1^2 and t2 = beta2^2. beta1 and beta2 are regression coefficients from a multiple regression model, i.e. y = x1.beta1 + x2.beta2 +e, where y, x1 and x2 are column-standardised. Lists of outputs are listed as follows.
+#' @return  This function will test the ratio which is significantly different from the expectation.To get the test statistic for the ratio which is significantly different from the expectation. var\[(t1/exp)-(t2/(1-exp))], where t1 = beta1^2 and t2 = beta2^2. beta1 and beta2 are regression coefficients from a multiple regression model, i.e. y = x1.beta1 + x2.beta2 +e, where y, x1 and x2 are column-standardised. The outputs are listed as follows.
 #' \item{beta1_sq}{t1}
 #' \item{beta2_sq}{t2}
 #' \item{var1}{Variance of t1}

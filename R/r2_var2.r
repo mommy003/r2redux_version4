@@ -9,16 +9,16 @@
   #' (v1 can be multiple values between 1 - M, see Arguments below)
   #' @param dat N by (M+1) matrix having variables in the order of cbind(y,x)
   #' @param v1 This can be set as v1=c(1), v1=c(1,2) or possibly with more values
-  #' @param nv sample size
+  #' @param nv Sample size
   #' @keywords R2 variance information matrix
   #' @export
   #' @importFrom stats D cor dnorm lm logLik pchisq qchisq qnorm
-  #' @return  This function will test the null hypothesis for R2. To get the test statistics for R2(y~x\[,v1])Lists of outputs are listed as follows.
+  #' @return  This function will test the null hypothesis for R2. To get the test statistics for R2(y~x\[,v1]). The outputs are listed as follows.
   #' \item{rsq}{R2}
   #' \item{var}{Variance of R2}
   #' \item{r2_based_p}{P-value under the null hypothesis, i.e. R2=0}
-  #' \item{upper_r2}{upper limit of 95% CI for R2}
-  #' \item{lower_r2}{lower limit of 95% CI for R2}
+  #' \item{upper_r2}{Upper limit of 95% CI for R2}
+  #' \item{lower_r2}{Lower limit of 95% CI for R2}
   #' @examples
   #'
   #' #To get the test statistics for R2(y~x[,v1])
