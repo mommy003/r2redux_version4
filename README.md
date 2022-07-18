@@ -15,7 +15,7 @@ We illustrate the usage of r2redux using multiple sets of PGS estimated based on
 
 # DATA PREPARATION
 **a.	Statistical testing of significant difference between R2 values for p-value thresholds:** 
-r2redux requires only phenotype and estimated PGS (from PLINK or any other software). Note that any missing value in the phenotypes and PGS tested in the model should be removed. If we want to test the significant difference of R^2 values for p-value thresholds, r2_diff function can be used with an input file that includes the following fields (also see test_ukbb_thresholds_scaled in the example directory and r2_diff function in the manual).
+r2redux requires only phenotype and estimated PGS (from PLINK or any other software). Note that any missing value in the phenotypes and PGS tested in the model should be removed. If we want to test the significant difference of R^2 values for p-value thresholds, r2_diff function can be used with an input file that includes the following fields (also see test_ukbb_thresholds_scaled in the example directory or read dat1 file embedded within the package and r2_diff function in the manual).
 
 
 - Phenotype (y)
@@ -55,7 +55,7 @@ To get the test statistics for the difference between R2(y=x[,v1]) and R2(yx[,v2
 
  
 **b. PGS-based genomic enrichment analysis:**
-If we want to perform some enrichment analysis (e.g., regulatory vs non_regulatory) in the PGS context to test significantly different from the expectation (4% = # SNPs in the regulatory / total # SNPs). We simultaneously fit two sets of PGS from regulatory and non-regulatory to get Î²_regu^2 and Î²_non_regu^2, using a multiple regression, and assess if the differences, (Î²_regu^2/expectation) - (Î²_non_regu^2/(1-expectation)), is significantly different from the null hypothesis. To test this, we need to prepare input file for r2redux that includes the following fields (e.g. test_ukbb_enrichment_choles in example directory and r2_enrich_beta function in the manual).
+If we want to perform some enrichment analysis (e.g., regulatory vs non_regulatory) in the PGS context to test significantly different from the expectation (4% = # SNPs in the regulatory / total # SNPs). We simultaneously fit two sets of PGS from regulatory and non-regulatory to get Î²_regu^2 and Î²_non_regu^2, using a multiple regression, and assess if the differences, (Î²_regu^2/expectation) - (Î²_non_regu^2/(1-expectation)), is significantly different from the null hypothesis. To test this, we need to prepare input file for r2redux that includes the following fields (e.g. test_ukbb_enrichment_choles in example directory or read dat2 file embedded within the package  and r2_enrich_beta function in the manual).
 - Phenotype (y)
 - PGS for regulatory region (x1)
 - PGS for non-regulatory region (x2)      
